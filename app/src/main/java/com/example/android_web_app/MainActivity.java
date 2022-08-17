@@ -6,6 +6,9 @@ import android.os.Bundle;
 import android.view.WindowManager;
 import android.webkit.WebView;
 import android.webkit.WebViewClient;
+import android.widget.Toast;
+
+import java.io.IOException;
 
 public class MainActivity extends AppCompatActivity {
     private WebView pagina;
@@ -21,7 +24,7 @@ public class MainActivity extends AppCompatActivity {
 
     private void initComponents() {
         ocultarBarra();
-        this.url = getUrl();
+        initUrl();
         initWeb();
     }
 
@@ -30,9 +33,13 @@ public class MainActivity extends AppCompatActivity {
         getSupportActionBar().hide();
     }
 
-    private String getUrl(){
-        //TODO
-        return "";
+    private void initUrl(){
+        try {
+            this.url = UrlReader.getInstance().getUrl(this.getResources().openRawResource(R.raw.config));
+        } catch (IOException e) {
+            e.printStackTrace();
+            Toast.makeText(this, "Error al cargar la página web.", Toast.LENGTH_LONG).show();
+        }
     }
 
     private void initWeb(){
