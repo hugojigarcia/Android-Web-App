@@ -10,6 +10,8 @@ An Android Web App template prepared for any website in just a few simple steps.
 1. Clone the repository if it's not already
 2. Access to the file: Android-Web-App\app\src\main\res\values\strings.xml
 3. Replace Android-Web-App with the desired name
+4. Access the file: Android-Web-App\app\build.gradle
+5. Replace applicationId "com.example.android_web_app" with applicationId "com.AuthorName.AppName" AuthorName and AppName can not contain blanks.
 
 ## STEPS TO SET THE ICON:
 1. Clone the repository if it's not already

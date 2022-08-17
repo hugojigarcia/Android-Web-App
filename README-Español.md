@@ -10,6 +10,8 @@ Una plantilla para aplicaciones web para Android preparada para cualquier sitio 
 1. Clonar el repositorio si no lo está ya
 2. Acceder al fichero: Android-Web-App\app\src\main\res\values\strings.xml
 3. Sustituir Android-Web-App por el nombre deseado
+4. Acceder al fichero: Android-Web-App\app\build.gradle
+5. Sustituir applicationId "com.example.android_web_app" por applicationId "com.nombreAutor.nombreApp" NombreAutor y NombreApp no pueden contener espacios
 
 ## PASOS PARA ESTABLECER EL ICONO:
 1. Clonar el repositorio si no lo está ya
